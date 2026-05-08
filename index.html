@@ -37,7 +37,7 @@ a{
   padding:28px;
 
   background:
-    linear-gradient(to bottom,transparent,rgba(0,0,0,.82)),
+    linear-gradient(to bottom,rgba(0,0,0,.65),rgba(0,0,0,.85)),
     url("./photo.jpeg");
 
   background-size:cover;
@@ -51,16 +51,31 @@ a{
 .logo{
   font-weight:800;
   letter-spacing:3px;
+  color:white;
+
+  text-shadow:
+    0 0 10px rgba(0,0,0,.9),
+    0 0 25px rgba(0,0,0,.9);
+
+  z-index:10;
+  position:relative;
 }
 
 .artist-title h1{
   font-size:48px;
   line-height:.95;
   margin-bottom:12px;
+
+  text-shadow:
+    0 0 12px rgba(0,0,0,.9),
+    0 0 30px rgba(0,0,0,.9);
 }
 
 .artist-title p{
-  color:#ccc;
+  color:#ddd;
+
+  text-shadow:
+    0 0 10px rgba(0,0,0,.9);
 }
 
 .right{
@@ -124,6 +139,11 @@ h2{
   color:black;
   font-weight:700;
   font-size:14px;
+  transition:.2s;
+}
+
+.btn:hover{
+  transform:translateY(-2px);
 }
 
 .btn.dark{
@@ -186,6 +206,7 @@ h2{
   border:1px solid #333;
   color:#ddd;
   font-size:14px;
+  transition:.2s;
 }
 
 .platforms a:hover{
