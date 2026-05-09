@@ -8,8 +8,15 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
 
 body{
   background:#050505;
@@ -18,7 +25,10 @@ body{
   overflow-x:hidden;
 }
 
-a{text-decoration:none;color:inherit}
+a{
+  color:inherit;
+  text-decoration:none;
+}
 
 body::before{
   content:"";
@@ -71,7 +81,9 @@ nav{
   transition:.2s;
 }
 
-.nav-links a:hover{color:white}
+.nav-links a:hover{
+  color:white;
+}
 
 .hero{
   min-height:680px;
@@ -150,10 +162,11 @@ h1{
   font-weight:800;
   font-size:14px;
   transition:.25s;
-  display:inline-block;
 }
 
-.btn:hover{transform:translateY(-3px)}
+.btn:hover{
+  transform:translateY(-3px);
+}
 
 .btn-dark{
   background:#151515;
@@ -196,9 +209,13 @@ h1{
   margin-bottom:8px;
 }
 
-.hero-label p{color:#cfcfcf}
+.hero-label p{
+  color:#cfcfcf;
+}
 
-.section{margin-top:22px}
+.section{
+  margin-top:22px;
+}
 
 .release{
   display:grid;
@@ -315,7 +332,9 @@ h1{
   transition:.25s;
 }
 
-.product:hover{transform:translateY(-5px)}
+.product:hover{
+  transform:translateY(-5px);
+}
 
 .product img{
   width:100%;
@@ -376,18 +395,26 @@ footer{
     grid-template-columns:1fr;
   }
 
-  h1{font-size:58px}
+  h1{
+    font-size:58px;
+  }
 
-  .hero{min-height:auto}
+  .hero{
+    min-height:auto;
+  }
 
-  .hero-image{min-height:520px}
+  .hero-image{
+    min-height:520px;
+  }
 
   .section-title{
     flex-direction:column;
     align-items:flex-start;
   }
 
-  .product img{height:420px}
+  .product img{
+    height:420px;
+  }
 
   footer{
     flex-direction:column;
@@ -490,39 +517,30 @@ footer{
 
   <div id="merch" class="section-title">
     <h2>Merch drop</h2>
-    <p>Click any merch photo to open the full-size image.</p>
+    <p>Limited pieces created around the artist’s sound, image and visual world.</p>
   </div>
 
   <section class="merch-grid">
 
     <div class="product">
-      <a href="./merch1.jpg" target="_blank">
-        <img src="./merch1.jpg" alt="FlyBy Billy Hoodie">
-      </a>
-
+      <img src="./merch1.jpg" alt="FlyBy Billy Hoodie">
       <h3>FlyBy Billy Hoodie</h3>
       <p class="price">$89</p>
-      <a class="btn btn-dark" href="./merch1.jpg" target="_blank">Open Photo</a>
+      <a class="btn btn-dark" href="#">View Product</a>
     </div>
 
     <div class="product">
-      <a href="./merch2.jpg" target="_blank">
-        <img src="./merch2.jpg" alt="Studio Edition">
-      </a>
-
+      <img src="./merch2.jpg" alt="Studio Edition">
       <h3>Studio Edition</h3>
       <p class="price">$95</p>
-      <a class="btn btn-dark" href="./merch2.jpg" target="_blank">Open Photo</a>
+      <a class="btn btn-dark" href="#">View Product</a>
     </div>
 
     <div class="product">
-      <a href="./merch3.jpg" target="_blank">
-        <img src="./merch3.jpg" alt="Streetwear Drop">
-      </a>
-
+      <img src="./merch3.jpg" alt="Streetwear Drop">
       <h3>Streetwear Drop</h3>
       <p class="price">$99</p>
-      <a class="btn btn-dark" href="./merch3.jpg" target="_blank">Open Photo</a>
+      <a class="btn btn-dark" href="#">View Product</a>
     </div>
 
   </section>
