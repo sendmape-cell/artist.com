@@ -8,6 +8,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 <style>
+
 *{
   margin:0;
   padding:0;
@@ -162,6 +163,7 @@ h1{
   font-weight:800;
   font-size:14px;
   transition:.25s;
+  cursor:pointer;
 }
 
 .btn:hover{
@@ -231,15 +233,13 @@ h1{
 .cover{
   height:300px;
   border-radius:28px;
-  background:
-    radial-gradient(circle at 30% 25%,#fff,transparent 17%),
-    radial-gradient(circle at 70% 75%,#ff2f91,transparent 30%),
-    #151515;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-weight:900;
-  letter-spacing:3px;
+  overflow:hidden;
+}
+
+.cover img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
 }
 
 .release h2{
@@ -267,6 +267,7 @@ h1{
   border:1px solid rgba(255,255,255,.08);
   color:#ddd;
   font-size:14px;
+  transition:.2s;
 }
 
 .platforms a:hover{
@@ -286,6 +287,11 @@ h1{
   border-radius:30px;
   background:rgba(14,14,14,.9);
   border:1px solid rgba(255,255,255,.08);
+  transition:.25s;
+}
+
+.info-card:hover{
+  transform:translateY(-5px);
 }
 
 .info-card h3{
@@ -344,6 +350,12 @@ h1{
   display:block;
   background:#111;
   margin-bottom:18px;
+  cursor:pointer;
+  transition:.2s;
+}
+
+.product img:hover{
+  opacity:.88;
 }
 
 .product h3{
@@ -387,7 +399,38 @@ footer{
   justify-content:space-between;
 }
 
+.lightbox{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.94);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  z-index:9999;
+  padding:30px;
+}
+
+.lightbox.active{
+  display:flex;
+}
+
+.lightbox img{
+  max-width:92%;
+  max-height:92%;
+  border-radius:24px;
+}
+
+.close{
+  position:absolute;
+  top:30px;
+  right:34px;
+  font-size:42px;
+  color:white;
+  cursor:pointer;
+}
+
 @media(max-width:1000px){
+
   .hero,
   .release,
   .info-grid,
@@ -430,140 +473,256 @@ footer{
 
 <div class="wrapper">
 
-  <nav>
-    <div class="logo">FlyBy Billy</div>
+<nav>
 
-    <div class="nav-links">
-      <a href="#release">Release</a>
-      <a href="#merch">Merch</a>
-      <a href="#contact">Contact</a>
-    </div>
-  </nav>
-
-  <section class="hero">
-
-    <div class="hero-copy">
-      <div>
-        <p class="tag">Official artist website</p>
-
-        <h1>Music, merch and identity.</h1>
-
-        <p class="hero-text">
-          The official destination for releases, visuals, exclusive drops,
-          streaming links and booking.
-        </p>
-
-        <div class="buttons">
-          <a class="btn" href="#release">Listen Now</a>
-          <a class="btn btn-dark" href="#merch">View Merch</a>
-          <a class="btn btn-dark" href="#contact">Booking</a>
-        </div>
-      </div>
-    </div>
-
-   <div class="hero-image">
-  <img src="./photo.jpeg" alt="FlyBy Billy">
+<div class="logo">
+FLYBY BILLY
 </div>
-      <div class="hero-label">
-        <h2>FlyBy Billy</h2>
-        <p>New campaign online</p>
-      </div>
-    </div>
 
-  </section>
+<div class="nav-links">
+<a href="#release">Release</a>
+<a href="#merch">Merch</a>
+<a href="#contact">Contact</a>
+</div>
 
-  <section id="release" class="section release">
+</nav>
 
-    <div class="cover">COVER</div>
+<section class="hero">
 
-    <div>
-      <p class="tag">Latest release</p>
+<div class="hero-copy">
 
-      <h2>Release Title</h2>
+<div>
 
-      <p class="text">
-        Available now on all streaming platforms worldwide.
-      </p>
+<p class="tag">
+Official artist website
+</p>
 
-      <div class="platforms">
-        <a href="#">Spotify</a>
-        <a href="#">Apple Music</a>
-        <a href="#">YouTube</a>
-        <a href="#">TikTok</a>
-        <a href="#">Instagram</a>
-      </div>
-    </div>
+<h1>
+Music, merch and identity.
+</h1>
 
-  </section>
+<p class="hero-text">
+The official destination for releases, visuals, exclusive drops,
+streaming links and booking.
+</p>
 
-  <section class="info-grid">
-
-    <div class="info-card">
-      <h3>Streaming</h3>
-      <p>All music platforms connected in one official destination.</p>
-    </div>
-
-    <div class="info-card">
-      <h3>Visual identity</h3>
-      <p>Premium presentation for visuals, campaigns and artist image.</p>
-    </div>
-
-    <div class="info-card">
-      <h3>Direct booking</h3>
-      <p>Contact for shows, collaborations, interviews and business.</p>
-    </div>
-
-  </section>
-
-  <div id="merch" class="section-title">
-    <h2>Merch drop</h2>
-    <p>Limited pieces created around the artist’s sound, image and visual world.</p>
-  </div>
-
-  <section class="merch-grid">
-
-    <div class="product">
-      <img src="./merch1.jpg" alt="FlyBy Billy Hoodie">
-      <h3>FlyBy Billy Hoodie</h3>
-      <p class="price">$89</p>
-      <a class="btn btn-dark" href="#">View Product</a>
-    </div>
-
-    <div class="product">
-      <img src="./merch2.jpg" alt="Studio Edition">
-      <h3>Studio Edition</h3>
-      <p class="price">$95</p>
-      <a class="btn btn-dark" href="#">View Product</a>
-    </div>
-
-    <div class="product">
-      <img src="./merch3.jpg" alt="Streetwear Drop">
-      <h3>Streetwear Drop</h3>
-      <p class="price">$99</p>
-      <a class="btn btn-dark" href="#">View Product</a>
-    </div>
-
-  </section>
-
-  <section id="contact" class="contact">
-    <h2>Booking & contact</h2>
-
-    <p>
-      For shows, interviews, collaborations and business inquiries.
-    </p>
-
-    <div class="buttons" style="justify-content:center;">
-      <a class="btn" href="mailto:booking@example.com">Email Booking</a>
-      <a class="btn btn-dark" href="#">Press Kit</a>
-    </div>
-  </section>
-
-  <footer>
-    <p>FlyBy Billy © 2026</p>
-    <p>Instagram / TikTok / Spotify / YouTube</p>
-  </footer>
+<div class="buttons">
+<a class="btn" href="#release">Listen Now</a>
+<a class="btn btn-dark" href="#merch">View Merch</a>
+<a class="btn btn-dark" href="#contact">Booking</a>
+</div>
 
 </div>
+
+</div>
+
+<div class="hero-image">
+
+<img src="./artistka.png" alt="FlyBy Billy">
+
+<div class="hero-label">
+<h2>FlyBy Billy</h2>
+<p>New campaign online</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="release" class="section release">
+
+<div class="cover">
+<img src="./nickname.png">
+</div>
+
+<div>
+
+<p class="tag">
+Latest release
+</p>
+
+<h2>
+NICKNAME
+</h2>
+
+<p class="text">
+New visual concept and official release campaign.
+</p>
+
+<div class="platforms">
+<a href="#">Spotify</a>
+<a href="#">Apple Music</a>
+<a href="#">YouTube</a>
+<a href="#">TikTok</a>
+<a href="#">Instagram</a>
+</div>
+
+</div>
+
+</section>
+
+<section class="info-grid">
+
+<div class="info-card">
+<h3>Streaming</h3>
+<p>
+All music platforms connected in one official destination.
+</p>
+</div>
+
+<div class="info-card">
+<h3>Visual identity</h3>
+<p>
+Premium presentation for visuals, campaigns and artist image.
+</p>
+</div>
+
+<div class="info-card">
+<h3>Direct booking</h3>
+<p>
+Contact for shows, collaborations, interviews and business.
+</p>
+</div>
+
+</section>
+
+<div id="merch" class="section-title">
+
+<h2>
+Merch drop
+</h2>
+
+<p>
+Limited pieces created around the artist’s sound,
+image and visual world.
+</p>
+
+</div>
+
+<section class="merch-grid">
+
+<div class="product">
+
+<img src="./merch1.jpg" onclick="openImage(this.src)">
+
+<h3>
+FlyBy Billy Hoodie
+</h3>
+
+<p class="price">
+$89
+</p>
+
+<a class="btn btn-dark">
+View Product
+</a>
+
+</div>
+
+<div class="product">
+
+<img src="./merch2.jpg" onclick="openImage(this.src)">
+
+<h3>
+Studio Edition
+</h3>
+
+<p class="price">
+$95
+</p>
+
+<a class="btn btn-dark">
+View Product
+</a>
+
+</div>
+
+<div class="product">
+
+<img src="./merch3.jpg" onclick="openImage(this.src)">
+
+<h3>
+Streetwear Drop
+</h3>
+
+<p class="price">
+$99
+</p>
+
+<a class="btn btn-dark">
+View Product
+</a>
+
+</div>
+
+</section>
+
+<section id="contact" class="contact">
+
+<h2>
+Booking & contact
+</h2>
+
+<p>
+For shows, interviews, collaborations and business inquiries.
+</p>
+
+<div class="buttons" style="justify-content:center;">
+
+<a class="btn" href="mailto:booking@example.com">
+Email Booking
+</a>
+
+<a class="btn btn-dark">
+Press Kit
+</a>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>
+FlyBy Billy © 2026
+</p>
+
+<p>
+Instagram / TikTok / Spotify / YouTube
+</p>
+
+</footer>
+
+</div>
+
+<div class="lightbox" id="lightbox">
+
+<div class="close" onclick="closeImage()">
+×
+</div>
+
+<img id="lightbox-img">
+
+</div>
+
+<script>
+
+function openImage(src){
+  document.getElementById("lightbox").classList.add("active");
+  document.getElementById("lightbox-img").src = src;
+}
+
+function closeImage(){
+  document.getElementById("lightbox").classList.remove("active");
+}
+
+document.getElementById("lightbox").addEventListener("click", function(e){
+  if(e.target.id === "lightbox"){
+    closeImage();
+  }
+});
+
+</script>
 
 </body>
 </html>
